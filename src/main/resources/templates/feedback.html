@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <style>
+        body { background-color: #41617d; margin: 20px;}
+        h1 { color: #ffffff;}
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Feedback</h1>
+<form action="#" th:action="@{/feedback}" th:object="${feedback}" method="post">
+    <textarea name="Text1" cols="40" rows="2" th:field="*{content}"></textarea>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
